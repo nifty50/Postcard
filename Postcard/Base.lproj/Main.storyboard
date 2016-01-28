@@ -14,6 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="9uV-qC-lEi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="r38-yP-Smc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SagradaFamilia.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="ErN-a0-mgy">
@@ -74,18 +75,6 @@
                                     <rect key="frame" x="20" y="72" width="334" height="61"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vax-ZD-T39">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.42829550012067263" blue="0.2523644116475966" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Send Mail"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="161" width="226" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="sendMailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lbF-kt-abq"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6OD-cd-eIz">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -102,24 +91,47 @@
                                     <rect key="frame" x="20" y="267" width="334" height="30"/>
                                 </variation>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKT-Wm-96s">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="141" width="226" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vax-ZD-T39">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.42829550012067263" blue="0.2523644116475966" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send Mail"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="191" width="226" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sendMailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lbF-kt-abq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="dHT-sS-fME"/>
                                 <exclude reference="TZb-59-haU"/>
-                                <exclude reference="Vax-ZD-T39"/>
                                 <exclude reference="6OD-cd-eIz"/>
                                 <exclude reference="fcf-tS-501"/>
+                                <exclude reference="TKT-Wm-96s"/>
+                                <exclude reference="Vax-ZD-T39"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="dHT-sS-fME"/>
                                 <include reference="TZb-59-haU"/>
-                                <include reference="Vax-ZD-T39"/>
                                 <include reference="6OD-cd-eIz"/>
                                 <include reference="fcf-tS-501"/>
+                                <include reference="TKT-Wm-96s"/>
+                                <include reference="Vax-ZD-T39"/>
                             </mask>
                         </variation>
                     </view>
@@ -128,6 +140,7 @@
                         <outlet property="enterNameFieldText" destination="6OD-cd-eIz" id="R5g-Jt-anm"/>
                         <outlet property="mailButton" destination="Vax-ZD-T39" id="8Ra-25-VUC"/>
                         <outlet property="messageLabel" destination="TZb-59-haU" id="fvu-2E-gHd"/>
+                        <outlet property="nameLabel" destination="TKT-Wm-96s" id="bcN-0K-n7c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
